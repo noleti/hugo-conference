@@ -1,7 +1,6 @@
 <h2 class="section-title">{{ .titles.schedule }}</h2>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+<p>{{ .subtitles.schedule }}</p>
 <div class="schedule-tbl">
   <table>
     <thead>
@@ -13,25 +12,26 @@ tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
     </thead>
     <tbody>
       {{ range $slot := .schedule }}
-        {{ if ne .presentation nil }}
+        {{ if ne .presentations nil }}
           <tr>
-            <td class="schedule-time">{{ .presentation.time }}</td>
+            <td class="schedule-time">{{ .time }}</td>
             <td class="schedule-slot">
-            {{ with .photo }}
-              <span class="speaker-photo">
-                <img class="photo" src="{{ . }}" alt="{{ $slot.name }}">
-              </span>
-            {{ end }}
-
-              {{ .presentation.title }}
-              <span class="speakers-company">{{ .company }}</span>
+              {{ .session }}
+              <span class="speakers-company">Chair: {{ .chair }}</span>
             </td>
-            <td class="schedule-description">{{ .presentation.description }}</td>
+            <td class="schedule-description">{{ .presentation.description }}
+	      <ul class="schedule-ul">
+		{{ range $presentation := .presentations }}
+		<li>
+		  {{ .title }}. <i>{{ .author }}</i>{{ if ne .pdf nil }}, <a url="{{ .pdf }}" target="_blank">pdf</a> {{ end }}{{ if ne .pdf nil }}, <a url="{{ .slides }}" target="_blank">slides</a> {{ end }}
+		</li>
+		{{ end }}  
+	    </td>
           </tr>
         {{ else }}
           <tr class="schedule-other">
             <td class="schedule-time">{{ .time }}</td>
-            <td class="schedule-slot">{{ .name }}</td>
+            <td class="schedule-slot">{{ .session }}</td>
             <td class="schedule-description">-</td>
           </tr>
         {{ end }}
