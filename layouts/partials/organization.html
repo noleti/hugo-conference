@@ -3,21 +3,21 @@
 <ul class="speakers-list">
   {{ range $person := .steering }}
   <li>
-    {{ if ne .url nil }} <a url="{{ .url }}" target="_blank" title="{{ .url }}"> {{ .name }} </a> {{ end }}, {{ .affiliation }}
+    {{ if ne .url nil }} <a url="{{ .url }}" target="_blank" title="{{ .url }}">{{ .name }}</a>, {{ end }} {{ .affiliation }}
   </li>
   {{ end }}  
 <h4>{{ .titles.chair }}</h4>
 <ul class="speakers-list">
   {{ range $person := .chair }}
   <li>
-    {{ if ne .url nil }} <a url="{{ .url }}" target="_blank" title="{{ .url }}"> {{ .name }} </a> {{ end }}, {{ .affiliation }}
+    {{ if ne .url nil }} <a url="{{ .url }}" target="_blank" title="{{ .url }}">{{ .name }}</a>, {{ end }} {{ .affiliation }}
   </li>
   {{ end }}  
 <h4>{{ .titles.tpc }}</h4>
 <ul class="speakers-list">
   {{ range $person := .tpc }}
   <li>
-    {{ if ne .url nil }} <a url="{{ .url }}" target="_blank" title="{{ .url }}"> {{ .name }} </a> {{ end }}, {{ .affiliation }}
+    {{ if ne .url nil }} <a url="{{ .url }}" target="_blank" title="{{ .url }}">{{ .name }}</a>,{{ end }} {{ .affiliation }}
   </li>
   {{ end }}
 </ul>
