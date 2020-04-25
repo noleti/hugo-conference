@@ -6,10 +6,8 @@
 
 <header class="header">
   <div class="wrapper">
-    <h1 class="logo-name">
-      <a class="logo-link" href="#" title="{{ .name }}" itemprop="name">{{ .name }}</a>
-    </h1>
-    <h2 class="tagline">{{ .date }}, {{ .venue }}, {{ .city }}</h2>
+    <h1 class="logo-name"> {{ .name }} </h1>
+    <h2 class="tagline">{{ .description }} <br> {{ .date }}, {{ .venue }}, {{ .city }}, {{ .state }}, {{ .country }}</h2>
 
     <div class="call-action-area">
       {{ with .price }}
