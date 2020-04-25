@@ -15,6 +15,7 @@ params:
   Address: "Boulevard Kukulcan, 30"
   City:  "Cancún"
   State: "Quintana"
+  City:  "Mexico"
   Images: ["/img/badge.jpg"]
   GoogleMapsKey: "my-secret-maps-key"
 
@@ -25,6 +26,7 @@ params:
     - location
     - speakers
     - schedule
+    - organization
     - sponsors
     - partners
     #- contact
@@ -35,9 +37,14 @@ params:
     location: "Location"
     speakers: "Speakers"
     schedule: "Schedule"
+    organization: "Organization"
     sponsors: "Sponsors"
     partners: "Partners"
     contact: "Contact"
+    steering: "Steering Committee"
+    chair: "Program Chairs"
+    tpc: "Technical Program Committee"
+    
 
   # The Call To Action button at the header,
   # If you don't want this, just remove the callToAction property.
@@ -48,6 +55,27 @@ params:
   # Fork me on GitHub, if you don't want this, just remove the forkButton property
   ForkButton:
     repository: "https://github.com/jweslley/hugo-conference/"
+
+  # List of Steering Committee
+  Steering:
+    - name: "Hugo"
+      affiliation: "Hugo University, Universe"
+      url: "http://gohugo.io"
+
+  # List of Program Chair(s)
+  Chair:
+    - name: "Hugo"
+      affiliation: "Hugo University, Universe"
+      url: "http://gohugo.io"
+
+  # List of TPC
+  TPC:
+    - name: "Hugo"
+      affiliation: "Hugo University, Universe"
+      url: "http://gohugo.io"
+    - name: "Hugo"
+      affiliation: "Hugo University, Universe"
+      url: "http://gohugo.io"
 
   # List of Sponsors
   Sponsors:
