@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  list-style: none;
+  //list-style: none;
   border: 0;
   text-decoration: none;
 }
@@ -61,6 +61,10 @@ textarea {
 }
 body {
   margin: 0;
+}
+a {
+    text-decoration: underline;
+    color: #000;
 }
 a:focus {
   outline: thin dotted;
@@ -143,8 +147,6 @@ dd {
 }
 nav ul,
 nav ol {
-  list-style: none;
-  list-style-image: none;
   margin: 0;
   padding: 0;
 }
@@ -284,7 +286,7 @@ hr {
   padding: 50px 0;
 }
 .content section {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 /* =============================================================================
    BASIC STYLES
@@ -306,8 +308,14 @@ h4 {
 p {
   font-size: 1.6em;
   line-height: 1.6em;
-  margin-bottom: 1.4em;
+  margin-top: 0.7em;
+  margin-bottom: 0.7em;
 }
+s {
+  text-decoration: line-through;
+ }
+
+
 .photo {
   max-width: 100%;
   position: relative;
@@ -324,7 +332,7 @@ nav {
 }
 .nav-item {
   display: inline-block;
-  margin-right: 15px;
+  margin-right: 5px;
 }
 .nav-link {
   font-size: 1.4em;
@@ -347,20 +355,26 @@ nav {
   letter-spacing: -0.02em;
 }
 .call-action-area .price {
-  font-size: 4em;
+  font-size: 2em;
   vertical-align: center;
   margin-right: 20px;
 }
+.centerblock {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .call-action-area .call-action-link,
 .btn {
   position: relative;
-  top: -5px;
+  margin-bottom: 20px;
   cursor: pointer;
   display: inline-block;
   padding: 15px 30px;
-  font-size: 2em;
   line-height: 1em;
   vertical-align: center;
+  text-align: center;
   letter-spacing: -0.02em;
   -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
@@ -381,13 +395,19 @@ nav {
   padding: 19px;
   margin: 0 -20px 0;
 }
+
+li {
+    font-size: 1.6em;
+    line-height: 1.6em;
+  margin-left:20px;    
+}
+
+}
 /* =============================================================================
    SPEAKER
    ========================================================================== */
 .speakers-item {
   position: relative;
-  min-height: 180px;
-  padding-left: 180px;
   margin-bottom: 30px;
   border-bottom: 1px dashed #e7e7e7;
 }
@@ -456,6 +476,10 @@ nav {
 .speakers-company {
   display: block;
   font-size: 12px;
+}
+.schedule-ul li{
+    font-size: 1.2em;
+    line-height: 1.2em;
 }
 /* =============================================================================
    SPONSORS  and  PARTNERS
@@ -603,10 +627,11 @@ nav {
     margin-bottom: 15px;
     font-size: 1.4em;
   }
-  .call-action-area .price {
+  .call-action-area {
     font-size: 2em;
     margin: 0 0 15px;
     display: block;
+    line-height: 1em;
   }
   .call-action-area .call-action-link,
   .btn {
@@ -622,6 +647,10 @@ nav {
   }
   h4 {
     font-size: 1.8em;
+  }
+  li {
+    font-size: 1.4em;
+    margin-left:20px;          
   }
   p {
     font-size: 1.4em;
@@ -689,7 +718,10 @@ html {
 /* =============================================================================
    BASIC STYLES
    ========================================================================== */
-h1,
+h1  {
+  color: #FFFFFF;
+}
+
 h2,
 h3,
 h4,
@@ -705,6 +737,7 @@ nav {
 }
 .nav-link {
   color: #e7e7e7;
+  color: #ffffff;
 }
 .nav-link:active,
 .nav-link:hover,
@@ -716,7 +749,6 @@ nav {
    HEADER
    ========================================================================== */
 .header {
-  background-image: url('../img/cover.jpg');
   background-color: #2b2b2b;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -728,11 +760,22 @@ nav {
   color: #fff;
   text-shadow: 1px 2px 1px rgba(0, 0, 0, 0.3);
 }
+.call-action-area {
+    color: #fddd52;
+    font-size: 2em;
+    line-height: 1em;
+}
+.call-action-area a{
+    color: #fddd52;
+    text-decoratio: underline;
+}
+
 .tagline {
   font-weight: normal;
 }
 .call-action-area .price {
-  color: #fddd52;
+    color: #fddd52;
+    text-decoration: underline;
 }
 .call-action-area .call-action-link,
 .btn {
