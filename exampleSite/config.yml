@@ -45,6 +45,8 @@ params:
     chair: "Program Chairs"
     tpc: "Technical Program Committee"
     
+  Subtitles:
+    about: "ACNS is an annual conference focusing on current developments that advance the areas of applied cryptography, cyber security (including network and computer security) and privacy. The goal is to represent both academic research works as well as developments in industrial and technical frontiers."
 
   # The Call To Action button at the header,
   # If you don't want this, just remove the callToAction property.
